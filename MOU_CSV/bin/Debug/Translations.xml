@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translations>
+<!--Form_ManagerObject-->
+    <Item>
+        <ENG>OBJECT LIST</ENG>
+        <JAP>オブジェクト一覧</JAP>
+    </Item>
+    <Item>
+        <ENG>Select a category to view</ENG>
+        <JAP>表示するカテゴリを選択してください</JAP>
+    </Item>
+    <Item>
+        <ENG>Search</ENG>
+        <JAP>検索</JAP>
+    </Item>
+    <Item>
+        <ENG>REFRESH</ENG>
+        <JAP>更新</JAP>
+    </Item>
+    <Item>
+        <ENG>Select a category to view information</ENG>
+        <JAP>情報を表示するカテゴリを選択してください</JAP>
+    </Item>
+    <Item>
+        <ENG>Filter by</ENG>
+        <JAP>フィルタ</JAP>
+    </Item>
+    <Item>
+        <ENG>All</ENG>
+        <JAP>全て</JAP>
+    </Item>
+    <Item>
+        <ENG>By Level</ENG>
+        <JAP>レベルで</JAP>
+    </Item>
+    <Item>
+        <ENG>By Type</ENG>
+        <JAP>タイプで</JAP>
+    </Item>
+    <Item>
+        <ENG>IMPORT CSV</ENG>
+        <JAP>CSVをインポート</JAP>
+    </Item>
+    <Item>
+        <ENG>Export Current Category CSV</ENG>
+        <JAP>現在のカテゴリをCSVにエクスポート</JAP>
+    </Item>
+    <Item>
+        <ENG>Export Multiple Categories CSV</ENG>
+        <JAP>複数カテゴリをCSVにエクスポート</JAP>
+    </Item>
+    <Item>
+        <ENG>No objects selected</ENG>
+        <JAP>オブジェクトが選択されていません</JAP>
+    </Item>
+    <Item>
+        <ENG>HIGHLIGHT</ENG>
+        <JAP>ハイライト</JAP>
+    </Item>
+    <Item>
+        <ENG>Apply Changes</ENG>
+        <JAP>変更を適用</JAP>
+    </Item>
+    <Item>
+        <ENG>No data available. Please run the Export command first</ENG>
+        <JAP>データがありません。まずエクスポートを実行してください</JAP>
+    </Item>
+    <Item>
+        <ENG>Unknown</ENG>
+        <JAP>不明</JAP>
+    </Item>
+    <Item>
+        <ENG>Loaded</ENG>
+        <JAP>読み込み完了</JAP>
+    </Item>
+    <Item>
+        <ENG>categories</ENG>
+        <JAP>カテゴリ</JAP>
+    </Item>
+    <Item>
+        <ENG>No category selected</ENG>
+        <JAP>カテゴリが選択されていません</JAP>
+    </Item>
+    <Item>
+        <ENG>No elements found</ENG>
+        <JAP>要素が見つかりません</JAP>
+    </Item>
+    <Item>
+        <ENG>objects</ENG>
+        <JAP>オブジェクト</JAP>
+    </Item>
+    <Item>
+        <ENG>object selected</ENG>
+        <JAP>オブジェクトが選択されました</JAP>
+    </Item>
+    <Item>
+        <ENG>objects selected</ENG>
+        <JAP>オブジェクトが選択されました</JAP>
+    </Item>
+    <Item>
+        <ENG>No data to export.</ENG>
+        <JAP>エクスポートするデータがありません。</JAP>
+    </Item>
+    <Item>
+        <ENG>Data exported successfully</ENG>
+        <JAP>データのエクスポートが成功しました</JAP>
+    </Item>
+    <Item>
+        <ENG>Notification</ENG>
+        <JAP>通知</JAP>
+    </Item>
+    <Item>
+        <ENG>Please select at least one object</ENG>
+        <JAP>少なくとも1つのオブジェクトを選択してください。</JAP>
+    </Item>
+    <Item>
+        <ENG>Highlighted</ENG>
+        <JAP>ハイライトしました</JAP>
+    </Item>
+    <Item>
+        <ENG>objects in Revit</ENG>
+        <JAP>Revit内のオブジェクト</JAP>
+    </Item>
+    <Item>
+        <ENG>No changes to apply</ENG>
+        <JAP>適用する変更はありません</JAP>
+    </Item>
+    <Item>
+        <ENG>Information</ENG>
+        <JAP>情報</JAP>
+    </Item>
+    <Item>
+        <ENG>Are you sure you want to apply</ENG>
+        <JAP>適用してもよろしいですか</JAP>
+    </Item>
+    <Item>
+        <ENG>This will update parameters in Revit after closing this form</ENG>
+        <JAP>このフォームを閉じた後にRevitのパラメータが更新されます</JAP>
+    </Item>
+    <Item>
+        <ENG>Confirm Apply Changes</ENG>
+        <JAP>変更適用の確認</JAP>
+    </Item>
+    <Item>
+        <ENG>Prepared</ENG>
+        <JAP>準備完了</JAP>
+    </Item>
+    <Item>
+        <ENG>Changes will be applied after closing this form</ENG>
+        <JAP>変更はフォームを閉じた後に適用されます</JAP>
+    </Item>
+    <Item>
+        <ENG>Select CSV File(s)</ENG>
+        <JAP>CSVファイルを選択</JAP>
+    </Item>
+    <Item>
+        <ENG>File</ENG>
+        <JAP>ファイル</JAP>
+    </Item>
+    <Item>
+        <ENG>is empty</ENG>
+        <JAP>は空です</JAP>
+    </Item>
+    <Item>
+        <ENG>Warning</ENG>
+        <JAP>警告</JAP>
+    </Item>
+    <Item>
+        <ENG>Successfully imported</ENG>
+        <JAP>インポート成功</JAP>
+    </Item>
+    <Item>
+        <ENG>rows from</ENG>
+        <JAP>行を</JAP>
+    </Item>
+    <Item>
+        <ENG>file(s)</ENG>
+        <JAP>ファイル</JAP>
+    </Item>
+    <Item>
+        <ENG>Import Successful</ENG>
+        <JAP>インポート完了</JAP>
+    </Item>
+    <Item>
+        <ENG>No changes detected</ENG>
+        <JAP>変更は検出されませんでした</JAP>
+    </Item>
+    <Item>
+        <ENG>Changes Summary</ENG>
+        <JAP>変更概要</JAP>
+    </Item>
+    <Item>
+        <ENG>Categories affected</ENG>
+        <JAP>影響を受けたカテゴリ</JAP>
+    </Item>
+    <Item>
+        <ENG>Objects affected</ENG>
+        <JAP>影響を受けたオブジェクト</JAP>
+    </Item>
+    <Item>
+        <ENG>Parameters affected</ENG>
+        <JAP>影響を受けたパラメータ</JAP>
+    </Item>
+    <Item>
+        <ENG>Total changes</ENG>
+        <JAP>総変更数</JAP>
+    </Item>
+    <Item>
+        <ENG>Do you want to highlight these changes</ENG>
+        <JAP>これらの変更をハイライトしますか</JAP>
+    </Item>
+    <Item>
+        <ENG>Apply Changes</ENG>
+        <JAP>変更を適用</JAP>
+    </Item>
+    <Item>
+        <ENG>Changes have been highlighted successfully</ENG>
+        <JAP>変更は正常にハイライトされました</JAP>
+    </Item>
+    <Item>
+        <ENG>Confirm</ENG>
+        <JAP>確認</JAP>
+    </Item>
+    <Item>
+        <ENG>Check None</ENG>
+        <JAP>全て解除</JAP>
+    </Item>    
+    <Item>
+        <ENG>Check All</ENG>
+        <JAP>全て選択</JAP>
+    </Item>
+    <Item>
+        <ENG>Export</ENG>
+        <JAP>エクスポート</JAP>
+    </Item>
+    <Item>
+        <ENG>Form_Export</ENG>
+        <JAP>エクスポートフォーム</JAP>
+    </Item>
+    <Item>
+        <ENG>Cancel</ENG>
+        <JAP>キャンセル</JAP>
+    </Item>
+
+    <Item>
+        <ENG>N/A</ENG>
+        <JAP>該当なし</JAP>
+    </Item>
+    <Item>
+        <ENG>Error</ENG>
+        <JAP>エラー</JAP>
+    </Item>
+    <Item>
+        <ENG>Parameter Name</ENG>
+        <JAP>パラメータ名</JAP>
+    </Item>
+    <Item>
+        <ENG>Level</ENG>
+        <JAP>レベル名</JAP>
+    </Item>
+    <Item>
+        <ENG>Type Name</ENG>
+        <JAP>タイプ名</JAP>
+    </Item>
+    <Item>
+        <ENG>Quantity</ENG>
+        <JAP>数量</JAP>
+    </Item>
+    <Item>
+        <ENG>Choose Categories</ENG>
+        <JAP>カテゴリを選択</JAP>
+    </Item>
+
+</Translations>

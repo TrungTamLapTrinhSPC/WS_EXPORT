@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>MOU_CSV</Name>
+    <Assembly>MOU_CSV.dll</Assembly>
+    <AddInId>0CEA97F1-9E09-4FB8-8772-273BFF600739</AddInId>
+    <FullClassName>MOU_CSV.myRibbon_Main</FullClassName>
+    <Text>CreateRibbon</Text>
+    <VendorId>TuanAnhNguyen.spc</VendorId>
+    <VendorDescription>TuanAnhNguyen, www.spec.edu.vn</VendorDescription>
+  </AddIn>
+ </RevitAddIns>
+
+ 
