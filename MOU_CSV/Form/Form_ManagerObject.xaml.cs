@@ -200,7 +200,7 @@ namespace MOU_CSV
 
                 foreach (var row in _sourceData)
                 {
-                    string categoryName = row.ContainsKey("Category") ? row["Category"] : "Unknown";
+                    string categoryName = row.ContainsKey(T("Category")) ? row[T("Category")] : T("Unknown");
 
                     if (categoryName != _selectedCategory.DisplayName)
                         continue;
@@ -271,10 +271,10 @@ namespace MOU_CSV
 
                 // Đếm số types
                 int distinctTypes = 0;
-                if (_elementsTable.Columns.Contains("Type Name"))
+                if (_elementsTable.Columns.Contains(T("Type Name")))
                 {
                     distinctTypes = _elementsTable.AsEnumerable()
-                        .Select(r => r.Field<string>("Type Name"))
+                        .Select(r => r.Field<string>(T("Type Name")))
                         .Where(t => !string.IsNullOrEmpty(t))
                         .Distinct()
                         .Count();
@@ -319,12 +319,12 @@ namespace MOU_CSV
             }
             else if (selectedFilter == T("By Level"))
             {
-                if (_elementsTable.Columns.Contains("Level"))
+                if (_elementsTable.Columns.Contains(T("Level")))
                     dv.Sort = "Level ASC";
             }
             else if (selectedFilter == T("By Type"))
             {
-                if (_elementsTable.Columns.Contains("Type Name"))
+                if (_elementsTable.Columns.Contains(T("Type Name")))
                     dv.Sort = "[Type Name] ASC";
             }
         }
@@ -672,7 +672,7 @@ namespace MOU_CSV
                 dict["Revit ID"] = group.Key;
 
                 // Thêm Category (lấy từ change đầu tiên trong group)
-                dict["Category"] = group.First().Category;
+                dict[T("Category")] = group.First().Category;
 
                 // Thêm tất cả parameters cần thay đổi
                 foreach (var change in group)

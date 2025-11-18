@@ -33,9 +33,9 @@ namespace MOU_CSV
 
 
 
-            _lb1.Text = SimpleTranslator.T("Choose Categories");
-            btnExport.Content = SimpleTranslator.T("Export");
-            btnCancel.Content = SimpleTranslator.T("Cancel");
+            _lb1.Text = T("Choose Categories");
+            btnExport.Content = T("Export");
+            btnCancel.Content = T("Cancel");
 
 
         }
@@ -51,7 +51,7 @@ namespace MOU_CSV
 
             // Nhóm theo Category và đếm số lượng
             var categoryGroups = _sourceData
-                .GroupBy(row => row.ContainsKey("Category") ? row["Category"] : "Unknown")
+                .GroupBy(row => row.ContainsKey(T("Category")) ? row[T("Category")] : T("Unknown"))
                 .Select(g => new CategoryItem
                 {
                     DisplayName = g.Key,
@@ -85,14 +85,14 @@ namespace MOU_CSV
 
             if (!selectedCategories.Any())
             {
-                System.Windows.MessageBox.Show("Please select at least one category.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(T("Please select at least one category."), T("Warning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
             // Chọn folder
             using (var dialog = new FolderBrowserDialog())
             {
-                dialog.Description = "Select folder to save CSV files";
+                dialog.Description = T("Select folder to save CSV files");
                 dialog.ShowNewFolderButton = true;
 
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -121,18 +121,18 @@ namespace MOU_CSV
                         }
 
                         // Hiển thị kết quả
-                        string message = $"Export completed!\n\n" +
-                                       $"✓ Success: {successCount} file(s)\n" +
-                                       $"✗ Failed: {errorCount} file(s)";
+                        string message = T("Export completed") + "!\n\n" +
+                                       "✓ " + T("Success") + ": " + successCount + T("file(s)") + "\n\n" +
+                                       "✗ " + T("Failed") + ": " + errorCount + T("file(s)");
 
                         if (errorCount > 0)
                         {
-                            message += $"\n\nErrors:\n{errorMessages}";
-                            System.Windows.MessageBox.Show(message, "Export Result", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            message += "\n\n" + T("Errors") + ": " + "\n" + errorMessages;
+                            System.Windows.MessageBox.Show(message, T("Export Result"), MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
                         else
                         {
-                            System.Windows.MessageBox.Show(message, "Export Result", MessageBoxButton.OK, MessageBoxImage.Information);
+                            System.Windows.MessageBox.Show(message, T("Export Result"), MessageBoxButton.OK, MessageBoxImage.Information);
                         }
 
                         DialogResult = true;
@@ -140,7 +140,7 @@ namespace MOU_CSV
                     }
                     catch (Exception ex)
                     {
-                        System.Windows.MessageBox.Show($"Export error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        System.Windows.MessageBox.Show(SimpleTranslator.T("Export error") + ": " + ex.Message, SimpleTranslator.T("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
             }
@@ -155,7 +155,7 @@ namespace MOU_CSV
             // Lọc dữ liệu theo category
             foreach (var row in _sourceData)
             {
-                string rowCategory = row.ContainsKey("Category") ? row["Category"] : "Unknown";
+                string rowCategory = row.ContainsKey(T("Category")) ? row[T("Category")] : T("Unknown");
 
                 if (rowCategory != categoryName)
                     continue;
@@ -173,19 +173,39 @@ namespace MOU_CSV
                     columnsCreated = true;
                 }
 
-                // Thêm dữ liệu
+                // Thêm dữ liệu với try-catch để xử lý cột thiếu
                 DataRow dataRow = elementsTable.NewRow();
                 foreach (var kvp in row)
                 {
-                    dataRow[kvp.Key] = kvp.Value ?? "";
+                    try
+                    {
+                        // Kiểm tra xem cột có tồn tại không
+                        if (elementsTable.Columns.Contains(kvp.Key))
+                        {
+                            dataRow[kvp.Key] = kvp.Value ?? "";
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                    }
                 }
+
+                // Đảm bảo các cột không có trong row được gán giá trị rỗng
+                foreach (DataColumn col in elementsTable.Columns)
+                {
+                    if (dataRow[col] == DBNull.Value || dataRow[col] == null)
+                    {
+                        dataRow[col] = "";
+                    }
+                }
+
                 elementsTable.Rows.Add(dataRow);
             }
 
             // Nếu không có dữ liệu, bỏ qua
             if (elementsTable.Rows.Count == 0)
             {
-                throw new Exception("No data found for this category");
+                throw new Exception(T("No data found for this category"));
             }
 
             // Tạo tên file
@@ -236,5 +256,11 @@ namespace MOU_CSV
             DialogResult = false;
             Close();
         }
+
+        private string T(string key)
+        {
+            return SimpleTranslator.T(key);
+        }
+
     }
 }
